@@ -19,6 +19,9 @@ const viewsRouter = require('./routes/views.router');
 
 const app = express();
 
+// Thrust proxies
+app.enable('trust proxy');
+
 // Server side rendering with PUG, supported by node
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
