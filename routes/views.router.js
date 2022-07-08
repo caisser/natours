@@ -1,13 +1,13 @@
 const express = require('express');
 const viewsController = require('../controllers/views.controller');
 const authController = require('../controllers/auth.controller');
-const bookingsController = require('../controllers/bookings.controller');
+// const bookingsController = require('../controllers/bookings.controller');
 
 const router = express.Router();
 
 router.get(
   '/',
-  bookingsController.createBookingCheckout,
+  // bookingsController.createBookingCheckout,
   authController.isLoggedIn,
   viewsController.getOverview
 );
