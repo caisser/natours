@@ -65,7 +65,7 @@ const limiter = rateLimit({
 app.use('/api', limiter);
 
 // Stripe webhook, needs the body in raw, not in json so, call the route before the body parser
-app.prototype(
+app.post(
   '/webhook-checkout',
   express.raw({ type: 'application/json' }),
   bookingsController.webhookCheckout
