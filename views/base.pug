@@ -11,7 +11,7 @@ html
       script(src='https://js.stripe.com/v3/')
       script(src='/js/bundle.js' defer)
 
-  body 
+  body(data-alert=`${alert ? alert : ''}`)
     // Header
     include _header
 
